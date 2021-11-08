@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+/* Section      : Main */
+/* Date         : 4th Nov 2021 */
+/* Author       : Aldi */
+
+/* ----------------------------------------------------------- */
+/* Import module, style, or file */
+import { ChatEngine } from 'react-chat-engine';
+import ChatFeed from './Component/chat-feed/ChatFeed';
 import './App.css';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChatEngine 
+      height="100vh"
+      projectID="442e3812-9347-408f-af1e-95cf27b6c67a"
+      userName="aldisugiarto"
+      userSecret="aldialdi"
+      renderChatFeed={(chatAppProps) => <ChatFeed {... chatAppProps} />}
+    />
   );
 }
 
